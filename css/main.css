@@ -1,7 +1,7 @@
 /* mobile first */
 .contBody {
   display: grid;
-  grid-template-areas: "headerGrid" "mainGrid" "footerGrid";
+  grid-template-areas: "headerGrid" "mainGrid" "footerGrid";
   align-items: center; }
 
 body {
@@ -65,14 +65,10 @@ header h1 a {
   grid-area: headerGrid; }
 
 .navBar {
-  display: flex;
-  flex-direction: column;
-  text-align: center; }
+  flex-direction: column; }
 
 nav {
-  display: flex;
   flex-direction: column;
-  text-align: center;
   padding-bottom: 10px; }
 
 nav ul li {
@@ -145,12 +141,15 @@ main div img:hover {
 
 /* media querie tablet */
 @media only screen and (min-width: 600px) {
+  .menuDecoration, .menuDecorationImg, .formularioDiv {
+    display: flex;
+    justify-content: center; }
   .contBody {
     display: grid;
-    grid-template-areas: "headerGrid headerGrid" "mainGrid mainGrid" "footerGrid footerGrid"; }
+    grid-template-areas: "headerGrid headerGrid" "mainGrid mainGrid" "footerGrid footerGrid"; }
   .contBodyNosotros {
     display: grid;
-    grid-template-areas: "headerGrid" "mainGridNosotros" "footerGrid"; }
+    grid-template-areas: "headerGrid" "mainGridNosotros" "footerGrid"; }
   /* header */
   .navBar {
     display: flex;
@@ -171,7 +170,7 @@ main div img:hover {
   /* main */
   .mainGrid {
     display: grid;
-    grid-template-areas: "h2 h2" "menu1 menu1Img" "menu1Text menu1Img" "menu2Img menu2" "menu2Img menu2Text"; }
+    grid-template-areas: "h2 h2" "menu1 menu1Img" "menu1Text menu1Img" "menu2Img menu2" "menu2Img menu2Text"; }
   h2 {
     padding-bottom: 30px; }
   .h2 {
@@ -183,15 +182,11 @@ main div img:hover {
   .menuDecoration {
     padding-top: 0;
     padding-bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
+    align-items: center; }
   .menuDecorationImg {
     height: 300px;
     padding: 9px;
-    margin-left: 20px;
-    display: flex;
-    justify-content: center; }
+    margin-left: 20px; }
   .menu1Img {
     grid-area: menu1Img; }
   .menu1Text {
@@ -207,8 +202,6 @@ main div img:hover {
   .objetivo {
     grid-area: objetivo; }
   .formularioDiv {
-    display: flex;
-    justify-content: center;
     width: 1300px;
     margin-bottom: 15px; } }
 
@@ -232,3 +225,7 @@ main div img:hover {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Hubballi', cursive; }
+
+.navBar, nav {
+  display: flex;
+  text-align: center; }

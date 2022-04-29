@@ -1,7 +1,14 @@
-@import "../utilities/variables";
+@import "../utilities/maps";
 
 /* media querie tablet */
 @media only screen and (min-width: 600px){
+    
+    // extend
+    %dis-flex-jus-center{
+        display: flex;
+        justify-content: center;
+    }
+
     .contBody{
         display: grid;
         grid-template-areas: "headerGrid headerGrid"
@@ -75,20 +82,17 @@
     }
 
     .menuDecoration{
+        @extend %dis-flex-jus-center;
         padding-top: 0;
         padding-bottom: 0;
-        display: flex;
         align-items: center;
-        justify-content: center;
     }
 
     .menuDecorationImg{
+        @extend %dis-flex-jus-center;
         height: 300px;
         padding: 9px;
         margin-left: 20px;
-        display: flex;
-        justify-content:center;
-        
     }
 
     .menu1Img{
@@ -121,8 +125,7 @@
     }
     
     .formularioDiv{
-        display: flex;
-        justify-content: center;
+        @extend %dis-flex-jus-center;
         width: 1300px;
         margin-bottom: 15px;
     }

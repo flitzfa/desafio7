@@ -1,4 +1,6 @@
-@import "../utilities/variables";
+@import "../utilities/maps";
+
+
 
 /* mobile first */
 .contBody{
@@ -15,7 +17,7 @@ body{
 
 /* header */
 header{
-    background: $color-header;
+    background: map-get($map:$colores , $key:color-header );
 }
 
 /* animacion header */
@@ -74,7 +76,7 @@ header h1:hover{
 
 header h1 a{
     text-decoration: none;
-    color: $color-letra-header;
+    color: map-get($map:$colores , $key:color-letra-header );
     font-size: 1.3em;
     font-weight: bold;
     font-family: 'Fredoka One', cursive;
@@ -86,15 +88,13 @@ header h1 a{
 }
 
 .navBar{
-    display: flex;
+    @extend %dis-flex-text-center;
     flex-direction: column;
-    text-align: center;
 }
 
 nav{
-    display: flex;
+    @extend %dis-flex-text-center;
     flex-direction: column;
-    text-align: center;
     padding-bottom: 10px;
 }
 
@@ -104,7 +104,7 @@ nav ul li{
 
 nav a{
     text-decoration: none;
-    color: $color-letra-header;
+    color: map-get($map:$colores , $key:color-letra-header );
     padding: 5px 12px;
     font-weight: bold;
     display: inline-block;
@@ -113,7 +113,7 @@ nav a{
 
 /* main */
 main{
-    background: $color-main;
+    background: map-get($map:$colores , $key:color-main );
 }
 
 .mainGrid{
@@ -126,14 +126,14 @@ main h2{
     font-size: 21px;
     margin-top: 15px;
     margin-bottom: 15px;
-    color: $color-letra-main;
+    color: map-get($map:$colores , $key:color-letra-main );
 }
 
 .menuDecoration{
     font-size: 20px;
     padding-top: 55px;
     padding-bottom: 20px;
-    color: $color-letra-main;
+    color: map-get($map:$colores , $key:color-letra-main );
     font-weight: bold;
     text-align: center;
 }

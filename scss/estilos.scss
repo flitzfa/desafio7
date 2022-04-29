@@ -8,3 +8,10 @@
     box-sizing: border-box;
     font-family: 'Hubballi', cursive;
 }
+
+// extend
+%dis-flex-text-center{
+    display: flex;
+    text-align: center;
+}
+
